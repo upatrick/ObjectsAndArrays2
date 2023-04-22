@@ -148,7 +148,61 @@
             <body>
                 <div class="inputBox" id="inner" style="color: azure;"></div>
                 <script>
+                    let pessoas = [];
+                    let continuarCadastro = true;
 
+                    while (continuarCadastro) {
+                    let nome = prompt("Informe o nome da pessoa:");
+                    let idade = parseInt(prompt("Informe a idade da pessoa:"));
+                    let trabalhando = confirm("A pessoa está trabalhando?");
+
+                    let pessoa = {
+                        nome: nome,
+                        idade: idade,
+                        trabalhando: trabalhando
+                    };
+
+                    if (pessoa.trabalhando) {
+                        let salario = parseInt(prompt("Informe o salário da pessoa:"));
+                        pessoa.salario = salario;
+                    }
+
+                    pessoas.push(pessoa);
+
+                    continuarCadastro = confirm("Deseja continuar cadastrando pessoas?");
+                    }
+
+                    let desempregados = [];
+                    let empregadosMenos2500 = [];
+                    let empregadosMais2500 = [];
+
+                    for (let i = 0; i < pessoas.length; i++) {
+                        if (!pessoas[i].trabalhando) {
+                            desempregados.push(pessoas[i]);
+                        } else if (pessoas[i].salario < 2500) {
+                            empregadosMenos2500.push(pessoas[i]);
+                        } else {
+                            empregadosMais2500.push(pessoas[i]);
+                        }
+                    }
+
+                    inner.innerHTML = `<h3>Pessoas desempregadas:`
+
+                    for (let i = 0; i < desempregados.length; i++) {
+                        inner.innerHTML += `<h3>Nome: ${desempregados[i].nome}, Idade: ${desempregados[i].idade}`
+                    }
+
+                    inner.innerHTML += `<h3>Pessoas empregadas com salários menores que 2500:`
+
+                    for (let i = 0; i < empregadosMenos2500.length; i++) {
+                        inner.innerHTML += `<h3>Nome: ${empregadosMenos2500[i].nome}, Idade: ${empregadosMenos2500[i].idade}, Salário: ${empregadosMenos2500[i].salario}`
+                    }
+
+                    inner.innerHTML += `<h3>Pessoas empregadas com salários maiores que 2500:`
+
+                    for (let i = 0; i < empregadosMais2500.length; i++) {
+                        inner.innerHTML += `<h3>Nome: ${empregadosMais2500[i].nome}, Idade: ${empregadosMais2500[i].idade}, Salário: ${empregadosMais2500[i].salario}`
+                    }
                 </script>
                 <!-- 3. Crie um cadastro de pessoas onde o usuário informe o nome, idade
                 e se está trabalhando ou não, se a pessoa estiver trabalhando
