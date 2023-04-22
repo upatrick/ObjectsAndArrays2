@@ -150,8 +150,9 @@
                 <script>
                     const salarios = [5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99, 1290.00, 15000.00];
                     const highSalary = salarios.findIndex(salario => salario > 7500);
-
+                    const salary8000 = salarios.filter(salario => salario > 8000);
                     inner.innerHTML = `${highSalary}`
+                    inner.innerHTML = `${salary8000}`
                     console.log(highSalary);
 
                 </script>
