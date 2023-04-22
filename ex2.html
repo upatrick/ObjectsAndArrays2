@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Trick</title>
+                <style>
+                    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: "poppins", sans-serif;
+                    }
+
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        flex-direction: column;
+                        gap: 30px;
+                        background: #1d2b3a;
+                    }
+
+                    .inputBox {
+                        position: relative;
+                    }
+
+                    .inputBox input {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.25);
+                        background: #1d2b3a;
+                        border-radius: 5px;
+                        outline: none;
+                        color: #fff;
+                        font-size: 1m;
+                    }
+
+                    .inputBox span {
+                        position: absolute;
+                        left: 0;
+                        padding: 10px;
+                        pointer-events: none;
+                        font-size: 1em;
+                        color: rgba(255, 255, 255, 0.25);
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                    }
+
+                    .inputBox input:valid ~ span,
+                    .inputBox input:focus ~ span {
+                        color: #00dfc4;
+                        transform: translateX(10px) translateY(-7px);
+                        font-size: 0.65em;
+                        padding: 0 10px;
+                        background: #1d2b3a;
+                        border-left: 1px solid #00dfc4;
+                        border-right: 1px solid #00dfc4;
+                        letter-spacing: 0.2em;
+                    }
+
+                    button {
+                        position: relative;
+                        background: #fff;
+                        color: #fff;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1.5em;
+                        letter-spacing: 0.1m;
+                        font-weight: 400;
+                        padding: 10px 30px;
+                        transition: 0.5s;
+                    }
+
+                    button:hover {
+                        background: var(--clr);
+                        color: var(--clr);
+                        letter-spacing: 0.25em;
+                        box-shadow: 0 0 35px var(--clr);
+                    }
+
+                    button:before {
+                        content: "";
+                        position: absolute;
+                        inset: 2px;
+                        background: #1d2b3a;
+                    }
+
+                    button span {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    button i {
+                        position: absolute;
+                        inset: 0;
+                        display: block;
+                    }
+
+                    button i:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 80%;
+                        width: 10px;
+                        height: 4px;
+                        background: #1d2b3a;
+                        transform: translateX(-50%) skewX(325deg);
+                        transition: 0.5s;
+                    }
+
+                    button:hover i:before {
+                        width: 20px;
+                        left: 20%;
+                    }
+
+                    button i:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 20%;
+                        width: 10px;
+                        height: 4px;
+                        background: #1d2b3a;
+                        transform: translateX(-50%) skew(325deg);
+                        transition: 0.5s;
+                    }
+
+                    button:hover i:after {
+                        width: 20px;
+                        left: 80%;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="inputBox" id="inner" style="color: azure;"></div>
+                <script>
+                   
+                </script>
+                <!-- 2. James estava criando uma array com as cores do arco-íris, e ele
+                esqueceu algumas cores. As cores padrão de um arco-íris são
+                normalmente listadas nesta ordem:
+                const rainbow = ["Vermelho", "Laranja", "Amarelo", "Verde", "Azul",
+                "Roxo"];
+
+                mas James tinha isto:
+                const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];
+
+                Usando somente o método splice insira as cores que faltam na array e
+                remova a cor "Preto", seguindo estes passos:
+
+                a. Remova "Preto"
+                b. Adicione "Amarelo" e "Verde"
+                c. Adicione "Roxo" -->
+            </body>
+        </html>
+    </body>
+</html>
